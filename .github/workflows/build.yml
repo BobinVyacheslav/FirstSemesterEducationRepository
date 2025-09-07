@@ -1,0 +1,10 @@
+name: TimeAndDate
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Current Date
+        run: |
+
+          echo "Current date and time: $(date '+%d/%m/%Y %H:%M:%S')"
