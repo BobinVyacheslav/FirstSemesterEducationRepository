@@ -14,5 +14,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'oracle'
-      - name: Build with Maven
-        run: ls -la
+      - name: Set directory
+        run: cd MavenEducation
+      - name: Set up with Maven
+        run: mvn package
