@@ -14,11 +14,9 @@ jobs:
 #        with:
 #          java-version: '21'
 #          distribution: 'oracle'
-      - name: Set directory
-        run: cd MavenEducation/
       - name: Check directory
-        run: pwd
-      - name: Check files
+        working-directory: ./MavenEducation
         run: ls -la
+
 #      - name: Set up with Maven
 #        run: mvn package
