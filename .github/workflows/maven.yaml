@@ -9,14 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-#      - name: Set up JDK 21
-#        uses: actions/setup-java@v3
-#        with:
-#          java-version: '21'
-#          distribution: 'oracle'
-      - name: Check directory
-        working-directory: ./MavenEducation
-        run: ls -la
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'oracle'
+#      - name: Check directory
+#        working-directory: ./MavenEducation
+#        run: ls -la
 
-#      - name: Set up with Maven
-#        run: mvn package
+      - name: Set up with Maven
+        working-directory: ./MavenEducation
+        run: mvn package
