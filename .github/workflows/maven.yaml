@@ -16,5 +16,7 @@ jobs:
           distribution: 'oracle'
       - name: Set directory
         run: cd MavenEducation
+      - name: Check directory
+        run: pwd
       - name: Set up with Maven
         run: mvn package
