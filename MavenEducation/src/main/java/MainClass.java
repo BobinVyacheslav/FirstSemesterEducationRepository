@@ -10,3 +10,6 @@ public class MainClass {
 
     }
 }
+interface Educable {
+    public Object study(Object InputObject);
+}
