@@ -1,3 +1,5 @@
+package com.mipt.vyacheslavbobin;
+
 public class MainClass {
     private int num;
     private String line;
@@ -9,7 +11,4 @@ public class MainClass {
         }
 
     }
-}
-interface Educable {
-    public Object study(Object InputObject);
 }

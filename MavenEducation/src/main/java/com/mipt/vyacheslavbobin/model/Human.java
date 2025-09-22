@@ -1,4 +1,4 @@
-package model;
+package com.mipt.vyacheslavbobin.model;
 
 public class Human {
     private String name;
