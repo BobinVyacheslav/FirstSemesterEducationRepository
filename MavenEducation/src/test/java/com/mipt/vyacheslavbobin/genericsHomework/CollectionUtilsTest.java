@@ -17,9 +17,9 @@ class CollectionUtilsTest {
     ArrayList<Integer> empty = new ArrayList<>();
     CollectionUtils.addAll(list1, list2);
     ArrayList<Integer> answ = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 8, 3, 5, 4, 9));
-    assertEquals(list1, answ);
+    assertEquals(answ, list1);
     CollectionUtils.addAll(list1, empty);
-    assertEquals(list1, answ);
+    assertEquals(answ, list1);
   }
   @Test
   public void testAddAllLinkedList() {
@@ -27,7 +27,7 @@ class CollectionUtilsTest {
     LinkedList<Integer> linkedList2 = new LinkedList<>(Arrays.asList(7, 8));
     LinkedList<Integer> answ = new LinkedList<>(Arrays.asList(2, 9, 7, 8));
     CollectionUtils.addAll(linkedList1, linkedList2);
-    assertEquals(linkedList1, answ);
+    assertEquals(answ, linkedList1);
   }
   @Test
   public void testMergeLists() {
@@ -35,7 +35,7 @@ class CollectionUtilsTest {
     List<Integer> list2 = Arrays.asList(8, 3, 5, 4, 9);
     List<Integer> answ = Arrays.asList(1, 2, 3, 4, 5, 8, 3, 5, 4, 9);
     List<Integer> merged = CollectionUtils.mergeLists(list1, list2);
-    assertEquals(merged, answ);
+    assertEquals(answ, merged);
 
   }
 }
