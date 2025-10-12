@@ -32,15 +32,4 @@ public class Calculator<T extends Number> {
       return a.doubleValue() / b.doubleValue();
     }
   }
-//  public static void main(String[] args){
-//    Calculator<Integer> integerCalculator = new Calculator<>();
-//    System.out.println(integerCalculator.sum(5, 3));
-//    System.out.println(integerCalculator.subtract(5, 3));
-//    System.out.println(integerCalculator.multiply(5, 3));
-//    System.out.println(integerCalculator.divide(5, 0));
-//    System.out.println(integerCalculator.divide(5,3));
-//    System.out.println(integerCalculator.subtract(null, 8));
-//    Calculator<Double> doubleCalculator = new Calculator<>();
-//    System.out.println(doubleCalculator.divide(5.0,0.0));
-//  }
 }
