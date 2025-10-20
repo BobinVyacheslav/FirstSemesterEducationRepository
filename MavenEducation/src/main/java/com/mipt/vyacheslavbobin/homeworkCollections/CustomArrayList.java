@@ -8,6 +8,9 @@ public class CustomArrayList<A> implements CustomList<A>, Iterable<A> {
   private int len = 15;
   private int size = 0;
 
+  /**
+   * @return итератор для коллекции
+   */
   @Override
   public Iterator<A> iterator() {
     return new LocalIterator();
@@ -30,8 +33,16 @@ public class CustomArrayList<A> implements CustomList<A>, Iterable<A> {
     }
   }
 
+  /**
+   * Добавляет элемент в коллекцию, расширяет массив по необходимости
+   * @param element добавляемый элемент, не null
+   *
+   */
   @Override
   public void add(A element) {
+    if (element == null) {
+      throw new NullPointerException();
+    }
     if (size < len) {
       data[size] = element;
       size++;
@@ -47,11 +58,22 @@ public class CustomArrayList<A> implements CustomList<A>, Iterable<A> {
     }
   }
 
+  /**
+   * возвращает элемент по индексу
+   * @param index
+   * @return значение элемента по индексу
+   */
   @Override
   public A get(int index) {
     return (A) data[index];
   }
 
+  /**
+   * удаляет элемент по индексу, смещает последующие влево
+   * уменьшает размер на 1
+   * @param index
+   * если индекс не входит в коллекцию, не делает ничего
+   */
   @Override
   public void remove(int index) {
     if (index >= size) {
@@ -68,11 +90,18 @@ public class CustomArrayList<A> implements CustomList<A>, Iterable<A> {
     size--;
   }
 
+  /**
+   * возвращает размер коллекции
+   * @return размер
+   */
   @Override
   public int size() {
     return size;
   }
 
+  /**
+   * @return пуста ли коллекция
+   */
   @Override
   public boolean isEmpty() {
     return (size == 0);
